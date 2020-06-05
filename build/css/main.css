@@ -184,6 +184,9 @@ body {
 }
 
 .header__title-subtitle {
+  display: block;
+  margin-top: -68px;
+  margin-right: 0;
   font-family: "RobotoCond", sans-serif;
   font-size: 56px;
   font-weight: 200;
