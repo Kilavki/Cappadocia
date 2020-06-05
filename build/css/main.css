@@ -114,6 +114,14 @@ body {
   overflow-x: hidden;
 }
 
+.body-text {
+  font-family: "RobotoCond", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 21px;
+}
+
 .container {
   max-width: 1200px;
   width: 100%;

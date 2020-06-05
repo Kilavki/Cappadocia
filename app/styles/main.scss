@@ -80,6 +80,10 @@ body {
 	overflow-x: hidden;
 }
 
+.body-text {
+	@include RobotoCond (18px, 300, normal, false, 21px);
+}
+
 .container {
 	max-width: 1200px;
 	width: 100%;
@@ -137,8 +141,6 @@ body {
 		}
 	}
 }
-
-
 
 .nav-menu {
 	&__item {
