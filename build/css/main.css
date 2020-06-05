@@ -228,6 +228,35 @@ body {
   line-height: 21px;
 }
 
+.title-inner {
+  margin: auto 0 100px;
+}
+
+.tittle {
+  font-family: "balqis";
+  font-size: 96px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 128px;
+  color: #E2AB3F;
+  text-align: center;
+}
+
+.subtitle {
+  display: block;
+  font-family: "RobotoCond", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 28px;
+  color: #333;
+}
+
+.subtitle__fairy-tail {
+  margin-top: -24px;
+  margin-left: 290px;
+}
+
 .container {
   max-width: 1200px;
   width: 100%;
@@ -235,9 +264,14 @@ body {
   padding: 0 15px;
 }
 
+.sections {
+  margin: 200px 0;
+}
+
 .header {
   position: relative;
   height: 100vh;
+  margin-bottom: 200px;
   background-image: url("../images/bg/header-bg.jpg");
   background-repeat: no-repeat;
   background-position: bottom center;
@@ -323,7 +357,6 @@ body {
   font-weight: 400;
   font-style: normal;
   line-height: 28px;
-  color: greenyellow;
 }
 
 .webp .header {

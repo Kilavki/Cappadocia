@@ -85,6 +85,27 @@ body {
 	@include RobotoCond (18px, 300, normal, false, 21px);
 }
 
+.title-inner {
+	margin: auto 0 100px;
+}
+
+.tittle {
+	@include balqis (96px, normal, normal, false, 128px);
+	color: $accent;
+	text-align: center;
+}
+
+.subtitle {
+	display: block;
+	@include RobotoCond (24px, 300, italic, false, 28px);
+	color: $textColor;
+	&__fairy-tail {
+		margin-top: -24px;
+		margin-left: 290px;
+	}
+}
+
+
 .container {
 	max-width: 1200px;
 	width: 100%;
@@ -92,9 +113,14 @@ body {
 	padding: 0 15px;
 }
 
+.sections {
+	margin: 200px 0;
+}
+
 .header {
 	position: relative;
 	height: 100vh;
+	margin-bottom: 200px;
 	background: {
 		image: url("../images/bg/header-bg.jpg");
 		repeat: no-repeat;
@@ -152,7 +178,6 @@ body {
 	}
 	&__link {
 		@include RobotoCond (24px, 400, normal, false, 28px);
-		color: greenyellow;
 	}
 }
 
