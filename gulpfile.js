@@ -120,7 +120,7 @@ function img() {
 
 function js() {
 	return src(scriptFiles)
-		.pipe(plumber())
+		// .pipe(plumber())
 		.pipe(concat(path.jsOutputName))
 		.pipe(uglify())
 		.pipe(dest(path.scripts.dest))
