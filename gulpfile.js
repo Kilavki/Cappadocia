@@ -7,6 +7,7 @@ let destDir = 'build';
 let imageFiles = 'jpg,png,svg,gif,ico,webp';
 let fontFiles = 'woff2,woff';
 let scriptFiles = [
+	srcDir + '/scripts/slick.js',
 	srcDir + '/scripts/tools.js',
 	srcDir + '/scripts/main.js',
 ];
