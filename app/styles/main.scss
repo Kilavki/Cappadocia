@@ -110,9 +110,8 @@ body {
 }
 
 .container {
-	max-width: 1200px;
-	width: 100%;
 	margin: 0 auto;
+	max-width: 1200px;
 	padding: 0 15px;
 }
 
@@ -216,8 +215,8 @@ body {
 		right: 0;
 		bottom: 0;
 		left: 0;
-		@extend .container
-	}
+		@extend .container;
+}
 	&__body {
 		display: flex;
 		flex-direction: column;
@@ -230,12 +229,12 @@ body {
 }
 
 .our-trip {
+	&__inner {
+		position: relative;
+	}
 	&__slider{
 		width: 50%;
 		margin-left: auto;
-	}
-	&__inner {
-		position: relative;
 	}
 	&__container {
 		position: absolute;
@@ -243,13 +242,13 @@ body {
 		right: 0;
 		bottom: 0;
 		left: 0;
-		@extend .container
+		@extend .container;
 	}
 	&__body {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		align-items: start;
+		align-items: flex-start;
 		width: 50%;
 		height: 100%;
 		margin-right: auto;
