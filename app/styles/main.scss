@@ -93,7 +93,7 @@ body {
 	margin: auto 0 100px;
 }
 
-.tittle {
+.title {
 	@include balqis (96px, normal, normal, false, 128px);
 	color: $accent;
 	text-align: center;
@@ -106,6 +106,10 @@ body {
 	&__fairy-tail {
 		margin-top: -24px;
 		margin-left: 290px;
+	}
+	&__our-trip {
+		margin-top: -24px;
+		margin-left: 300px;
 	}
 }
 
