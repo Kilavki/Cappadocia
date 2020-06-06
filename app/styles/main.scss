@@ -248,9 +248,12 @@ body {
 	&__body {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-around;
+		justify-content: space-between;
+		align-items: start;
 		width: 50%;
 		height: 100%;
+		margin-right: auto;
+		padding-right: 55px;
 	}
 	&__list {
 		@extend .body-text;
@@ -260,4 +263,11 @@ body {
 			color: $textColor;
 		}
 	}
+}
+
+.btn {
+	padding: 11px 53px;
+	@extend .body-text;
+	text-transform: uppercase;
+	border: 1px solid $accent;
 }
