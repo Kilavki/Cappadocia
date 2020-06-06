@@ -89,11 +89,8 @@ body {
 	}
 }
 
-.title-inner {
-	margin: auto 0 100px;
-}
-
 .title {
+	margin: 0 auto 100px;
 	@include balqis (96px, normal, normal, false, 128px);
 	color: $accent;
 }
@@ -247,5 +244,20 @@ body {
 		bottom: 0;
 		left: 0;
 		@extend .container
+	}
+	&__body {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		width: 50%;
+		height: 100%;
+	}
+	&__list {
+		@extend .body-text;
+		li:nth-child(1) {
+			margin-bottom: 20px;
+			@include RobotoCond (24px, 400, normal, false, 28px);
+			color: $textColor;
+		}
 	}
 }
