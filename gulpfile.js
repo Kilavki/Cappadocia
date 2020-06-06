@@ -41,6 +41,12 @@ let path = {
 		dest: destDir + '/fonts/',
 	},
 
+	libs: {
+		src: srcDir + '/libs/',
+		dest: destDir + '/libs/',
+		watch: srcDir + '/libs/**/*.*'
+	},
+
 	delete: destDir,
 	cssOutputName: 'main.min.css',
 	jsOutputName: 'main.min.js',
@@ -133,6 +139,11 @@ function fnt() {
 		.pipe(dest(path.fonts.dest));
 }
 
+function libs() {
+	return src(path.libs.src)
+		.pipe(dest(path.libs.dest));
+}
+
 function clear() {
 	return del(path.delete, { force: true });
 }
@@ -152,6 +163,7 @@ function dev() {
 	watch([srcDir + '/**/*.{' + imageFiles + '}'], img);
 	watch([srcDir + '/**/*.js'], js);
 	watch([srcDir + '/**/*.{' + fontFiles + '}'], fnt);
+	watch([path.libs.watch], libs);
 }
 
 gulp.task('otf2ttf', function() {
@@ -176,7 +188,7 @@ gulp.task('fonts', series(clearFnt, 'otf2ttf', 'ttf2woff', 'ttf2woff2'));
 
 
 
-const build = series(clear, parallel(css, img, js, fnt), html);
+const build = series(clear, parallel(css, img, js, fnt, libs), html);
 const watcher = parallel(build, dev);
 
 exports.clearFnt = clearFnt;
@@ -187,6 +199,7 @@ exports.img = img;
 exports.js = js;
 exports.fnt = fnt;
 exports.dev = dev;
+exports.libs = libs;
 exports.build = build;
 exports.watcher = watcher;
 exports.default = watcher;
