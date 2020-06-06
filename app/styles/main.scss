@@ -96,7 +96,6 @@ body {
 .title {
 	@include balqis (96px, normal, normal, false, 128px);
 	color: $accent;
-	text-align: center;
 }
 
 .subtitle {
@@ -105,14 +104,13 @@ body {
 	color: $textColor;
 	&__fairy-tail {
 		margin-top: -24px;
-		margin-left: 290px;
+		margin-left: 190px;
 	}
 	&__our-trip {
 		margin-top: -24px;
-		margin-left: 300px;
+		margin-left: 260px;
 	}
 }
-
 
 .container {
 	max-width: 1200px;
@@ -190,6 +188,24 @@ body {
 	}
 }
 
+.slick {
+	&-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	z-index: 5;
+	}
+	&-prev {
+		left: 0;
+	}
+	&-next {
+		right: 0;
+	}
+}
+
 .fairy-tail {
 	&__inner {
 		position: relative;
@@ -216,20 +232,20 @@ body {
 	}
 }
 
-.slick {
-	&-btn {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	border: none;
-	background-color: transparent;
-	cursor: pointer;
-	z-index: 5;
+.our-trip {
+	&__slider{
+		width: 50%;
+		margin-left: auto;
 	}
-	&-prev {
-		left: 0;
+	&__inner {
+		position: relative;
 	}
-	&-next {
+	&__container {
+		position: absolute;
+		top: 0;
 		right: 0;
+		bottom: 0;
+		left: 0;
+		@extend .container
 	}
 }
