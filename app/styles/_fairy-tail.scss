@@ -1,0 +1,26 @@
+.fairy-tail {
+	&__inner {
+		position: relative;
+		max-width: 1560px;
+	}
+	&__slider {
+		width: 61.5%;
+	}
+	&__content {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		max-width: 38.5%;
+	}
+	&__container {
+		margin-left: 55px;
+		height: 100%;
+	}
+	&__body {
+		display: flex;
+		flex-flow: column;
+		justify-content: space-around;
+		height: 100%;
+	}
+}

@@ -1,0 +1,63 @@
+.header {
+	position: relative;
+	height: 100vh;
+	margin-bottom: 200px;
+	background: {
+		image: url("../images/bg/header-bg.jpg");
+		repeat: no-repeat;
+		position: bottom center;
+		size: cover;
+	}
+	&-top {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 72px;
+		&__phone {
+			position: relative;
+			padding-left: 40px;
+			@include RobotoCond (24px, 400, normal, false, 28px);
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 30px;
+				height: 30px;
+				background-image: url("../images/icons/phone-icons.svg");
+			}
+		}
+	}
+	a {
+		color:inherit;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	&__title {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		@include balqis (250px, normal, normal, false, 334px);
+		text-align: center;
+		&-subtitle {
+			display: block;
+			margin-top: -68px;
+			margin-right: 0;
+			@include RobotoCond (56px, 200, italic, false, 66px);
+			text-align: right;
+		}
+	}
+}
+
+.nav-menu {
+	&__item {
+		display: inline-block;
+		+ .nav-menu__item {
+			padding-left: 52px;
+		}
+	}
+	&__link {
+		@include RobotoCond (24px, 400, normal, false, 28px);
+	}
+}
