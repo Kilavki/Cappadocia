@@ -25,6 +25,7 @@ body {
 	line-height: 1.65;
 	color: $textColor;
 	overflow-x: hidden;
+	
 }
 
 .body-text {
@@ -96,5 +97,6 @@ body {
 	&:hover {
 		background-color: $accent;
 		color: #fff;
+		transition: all 0.5s ease;
 	}
 }
