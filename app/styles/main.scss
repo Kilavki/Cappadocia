@@ -107,6 +107,10 @@ body {
 		margin-top: -24px;
 		margin-left: 260px;
 	}
+	&__hotel {
+		margin-top: -24px;
+		margin-left: 120px;
+	}
 }
 
 .container {
@@ -202,6 +206,13 @@ body {
 	}
 }
 
+.btn {
+	padding: 11px 53px;
+	@extend .body-text;
+	text-transform: uppercase;
+	border: 1px solid $accent;
+}
+
 .fairy-tail {
 	&__inner {
 		position: relative;
@@ -264,9 +275,44 @@ body {
 	}
 }
 
-.btn {
-	padding: 11px 53px;
-	@extend .body-text;
-	text-transform: uppercase;
-	border: 1px solid $accent;
+.hotel {
+	&__inner {
+		position: relative;
+		max-width: 1200px;
+		border: 1px solid #000;
+	}
+	&__img {
+		width: 41.5%;
+	}
+	&__content {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 58.5%;
+		height: 100%;
+		border: 1px solid green;
+	}
+	&__container {
+		margin-left: 100px;
+		height: 100%;
+		border: 1px solid orangered;
+	}
+	&__body {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+	}
+	&__gallery {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		// margin-top: 30px;
+		&-thumb {
+			margin-top: 40px;
+			width: 280px;
+			height: 150px;
+			object-fit: cover;
+		}
+	}
 }
