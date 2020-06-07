@@ -7,6 +7,16 @@
 @import "our-trip";
 @import "hotel";
 
+::placeholder {
+	color: #777;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+
+
 body {
 	position: relative;
 	min-width: 320px;
