@@ -10,7 +10,8 @@
 @import "contact";
 
 ::placeholder {
-	color: #777;
+	@include RobotoCond (18px, 300, normal, false, 21px);
+	color: $textColor;
 }
 
 ::selection {
@@ -75,6 +76,14 @@ body {
 		margin-top: -24px;
 		margin-left: 120px;
 	}
+	&-data {
+		margin-top: -24px;
+		margin-left: 180px;
+	}
+	&-price {
+		margin-top: -24px;
+		margin-left: 180px;
+	}
 }
 
 .h4-title {
@@ -82,6 +91,9 @@ body {
 	color: $textColor;
 	&__price {
 		padding-bottom: 50px;
+	}
+	&__form {
+		margin-bottom: 50px;
 	}
 }
 
@@ -101,6 +113,10 @@ body {
 	&-next {
 		right: 0;
 	}
+}
+
+button {
+	background-color: #fff;
 }
 
 .btn {
