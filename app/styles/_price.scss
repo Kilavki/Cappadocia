@@ -1,0 +1,29 @@
+	// background: {
+	// 	image: url("../images/bg/price-bg.png");
+	// 	repeat: no-repeat;
+	// 	position: right top;
+// }
+
+.price {
+	background: {
+		image: url("../images/bg/price-bg.png");
+		repeat: no-repeat;
+		position: center right;
+	}
+	&__inner {
+		display: flex;
+	}
+	&__on {
+		order: 1;
+		flex-basis: 43%;
+		margin-right: 70px;
+	}
+	&__off {
+		order: 2;
+		flex-basis: 43%;
+	}
+	&__list li {
+		margin-bottom: 20px;
+	}
+
+}

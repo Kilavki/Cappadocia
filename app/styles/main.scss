@@ -6,6 +6,7 @@
 @import "fairy-tail";
 @import "our-trip";
 @import "hotel";
+@import "price";
 
 ::placeholder {
 	color: #777;
@@ -68,6 +69,18 @@ body {
 	&__hotel {
 		margin-top: -24px;
 		margin-left: 120px;
+	}
+	&__price {
+		margin-top: -24px;
+		margin-left: 120px;
+	}
+}
+
+.h4-title {
+	@include RobotoCond (24px, 400, normal, false, 28px) 
+	color: $textColor;
+	&__price {
+		padding-bottom: 50px;
 	}
 }
 
