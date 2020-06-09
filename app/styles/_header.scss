@@ -40,12 +40,22 @@
 		transform: translate(-50%, -50%);
 		@include balqis (250px, normal, normal, false, 334px);
 		text-align: center;
+		@include mq("tablet-wide", max) {
+			font-size: calc(1rem + 19.5vw);
+		}
 		&-subtitle {
 			display: block;
 			margin-top: -68px;
 			margin-right: 0;
 			@include RobotoCond (56px, 200, italic, false, 66px);
 			text-align: right;
+			@include mq("tablet-wide", max) {
+				font-size: calc(1rem + 3.33vw);
+			}
+			@include mq("tablet", max) {
+				text-align: center;
+			}
+
 		}
 	}
 }
@@ -61,3 +71,10 @@
 		@include RobotoCond (24px, 400, normal, false, 28px);
 	}
 }
+
+
+		// .header {
+		// 	&__title {
+		// 		font-size: calc(1rem + 19.5vw);
+		// 	}
+		// }
