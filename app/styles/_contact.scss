@@ -30,6 +30,8 @@
 			height: 50px;
 			margin-bottom: 20px;
 			padding: 0 31px;
+			@include RobotoCond (18px, 300, normal, false, 21px);
+			color: $textColor;
 			border: 1px solid $accent;
 		}
 	}
