@@ -12,6 +12,10 @@
 		display: flex;
 		justify-content: space-between;
 		padding-top: 72px;
+		@include mq("tablet", max) {
+			display: flex;
+			flex-flow: column;
+		}
 		&__phone {
 			position: relative;
 			padding-left: 40px;
@@ -38,33 +42,48 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		@include balqis (250px, normal, normal, false, 334px);
+		@include balqis (250px, normal, normal, false, false); //334px
 		text-align: center;
 		@include mq("tablet-wide", max) {
 			font-size: calc(1rem + 19.5vw);
+		}
+		@include mq("tablet", max) {
+			font-size: calc(0.5rem + 19.5vw);
 		}
 		&-subtitle {
 			display: block;
 			margin-top: -68px;
 			margin-right: 0;
-			@include RobotoCond (56px, 200, italic, false, 66px);
+			@include RobotoCond (56px, 200, italic, false, 66px); //66px
 			text-align: right;
 			@include mq("tablet-wide", max) {
 				font-size: calc(1rem + 3.33vw);
 			}
 			@include mq("tablet", max) {
+				margin: 0;
 				text-align: center;
 			}
-
 		}
 	}
 }
 
 .nav-menu {
+	@include mq("tablet", max) {
+		display: flex;
+		flex-flow: column;
+		align-items: flex-start;
+	}
 	&__item {
 		display: inline-block;
+		@include mq("tablet", max) {
+			padding-bottom: 26px;
+			margin-bottom: 0;
+		}
 		+ .nav-menu__item {
 			padding-left: 52px;
+			@include mq("tablet", max) {
+				padding-left: 0;
+			}
 		}
 	}
 	&__link {
