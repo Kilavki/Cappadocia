@@ -49,21 +49,32 @@ body {
 .section {
 	margin: 200px auto;
 	max-width: 1920px;
+	@include mq ("desktop", max) {
+		margin: 100px auto;
+	}
 }
 
 .title {
 	margin: 0 0 100px;
 	@include balqis (96px, normal, normal, false, 128px);
 	color: $accent;
+	@include mq ("desktop", max) {
+		margin-bottom: 8vw;
+		font-size: calc(1rem + 7.1vw);
+	}
 }
 
 .subtitle {
 	display: block;
 	@include RobotoCond (24px, 300, italic, false, 28px);
 	color: $textColor;
+	@include mq ("desktop", max) {
+		font-size: calc(1rem + .75vw);
+	}
 	&__fairy-tail {
-		margin-top: -24px;
-		margin-left: 190px;
+		margin-top: -2vw; //-24
+		margin-left: 16vw; //190
+
 	}
 	&__our-trip {
 		margin-top: -24px;
@@ -107,6 +118,9 @@ body {
 	background-color: transparent;
 	cursor: pointer;
 	z-index: 5;
+	@include mq("tablet-wide", max) {
+		display: none;
+	}
 	}
 	&-prev {
 		left: 0;
