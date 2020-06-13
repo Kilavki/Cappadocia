@@ -52,6 +52,12 @@ body {
 	@include mq ("desktop", max) {
 		margin: 100px auto;
 	}
+	@include mq ("tablet", max) {
+		margin: 50px auto;
+	}
+	@include mq ("tablet-small", max) {
+		margin: 30px auto;
+	}
 }
 
 .title {
@@ -59,8 +65,12 @@ body {
 	@include balqis (96px, normal, normal, false, 128px);
 	color: $accent;
 	@include mq ("desktop", max) {
-		margin-bottom: 8vw;
+		margin-bottom: 6vw;
 		font-size: calc(1rem + 7.1vw);
+	}
+	@include mq ("phablet", max) {
+		font-size: calc(2.4rem + 7.1vw);
+		// font-size: 64px;
 	}
 }
 
@@ -72,13 +82,28 @@ body {
 		font-size: calc(1rem + .75vw);
 	}
 	&__fairy-tail {
-		margin-top: -2vw; //-24
-		margin-left: 16vw; //190
-
+		margin-top: -24px; //-24
+		margin-left: 190px; //190
+		@include mq ("tablet", max) {
+			margin-top: -32px;
+			margin-left: 150px;
+		}
+		@include mq ("tablet-small", max) {
+			margin-left: 120px;
+		}
+		@include mq ("phablet", max) {
+			margin-top: -36px;
+			margin-left: 150px;
+		}
+		@include mq ("phone", max) {
+			margin-top: -36px;
+			margin-left: 134px;
+		}
 	}
 	&__our-trip {
 		margin-top: -24px;
 		margin-left: 260px;
+
 	}
 	&__hotel {
 		margin-top: -24px;

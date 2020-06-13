@@ -52,7 +52,7 @@
 		@include balqis(20vw, normal, normal, false, false); //334px
 		text-align: center;
 		@include mq("tablet", max) {
-			top: 60%;
+			top: 56%;
 		}
 		&-subtitle {
 			display: block;
