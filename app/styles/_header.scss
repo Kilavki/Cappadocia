@@ -19,9 +19,9 @@
 		&__phone {
 			position: relative;
 			padding-left: 40px;
-			@include RobotoCond (24px, 400, normal, false, 28px);
+			@include RobotoCond(24px, 400, normal, false, 28px);
 			&::before {
-				content: '';
+				content: "";
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -29,10 +29,17 @@
 				height: 30px;
 				background-image: url("../images/icons/phone-icons.svg");
 			}
+			@include mq("tablet", max) {
+				padding-left: 0;
+				&::before {
+					content: '';
+					background-image: none;
+				}
+			}
 		}
 	}
 	a {
-		color:inherit;
+		color: inherit;
 		&:hover {
 			text-decoration: underline;
 		}
@@ -42,58 +49,51 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		@include balqis (250px, normal, normal, false, false); //334px
+		@include balqis(20vw, normal, normal, false, false); //334px
 		text-align: center;
-		@include mq("tablet-wide", max) {
-			font-size: calc(1rem + 19.5vw);
-		}
 		@include mq("tablet", max) {
-			font-size: calc(0.5rem + 19.5vw);
+			top: 60%;
 		}
 		&-subtitle {
 			display: block;
 			margin-top: -68px;
 			margin-right: 0;
-			@include RobotoCond (56px, 200, italic, false, 66px); //66px
+			@include RobotoCond(4.55vw, 200, italic, false, false); //66px
 			text-align: right;
-			@include mq("tablet-wide", max) {
-				font-size: calc(1rem + 3.33vw);
-			}
 			@include mq("tablet", max) {
-				margin: 0;
+				margin-top: 0;
+				font-size: 24px;
 				text-align: center;
 			}
 		}
 	}
 }
 
-.nav-menu {
-	@include mq("tablet", max) {
-		display: flex;
-		flex-flow: column;
-		align-items: flex-start;
-	}
-	&__item {
-		display: inline-block;
+.nav {
+	&-menu {
 		@include mq("tablet", max) {
-			padding-bottom: 26px;
-			margin-bottom: 0;
+			display: flex;
+			flex-flow: column;
+			align-items: flex-start;
 		}
-		+ .nav-menu__item {
-			padding-left: 52px;
+		&__item {
+			display: inline-block;
 			@include mq("tablet", max) {
-				padding-left: 0;
+				padding-bottom: 26px;
+				margin-bottom: 0;
+			}
+			+ .nav-menu__item {
+				padding-left: 52px;
+				@include mq("tablet", max) {
+					padding-left: 0;
+				}
+			}
+		}
+		&__link {
+			@include RobotoCond(24px, 400, normal, false, false);
+			@include mq("phablet", max) {
+				font-size: 20px;
 			}
 		}
 	}
-	&__link {
-		@include RobotoCond (24px, 400, normal, false, 28px);
-	}
 }
-
-
-		// .header {
-		// 	&__title {
-		// 		font-size: calc(1rem + 19.5vw);
-		// 	}
-		// }
