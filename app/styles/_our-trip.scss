@@ -48,8 +48,18 @@
 			@include mq("tablet-wide", max) {
 				flex-flow: row wrap;
 			}
+			@include mq("tablet", max) {
+				justify-content: space-between;
+			}
+			@include mq("tablet-small", max) {
+				justify-content: space-around;
+			}
+			@include mq("phablet", max) {
+				flex-flow: column;
+			}
 		}
 		@include mq("tablet-wide", max) {
+			align-items: center;
 			margin-bottom: 40px;
 		}
 	}
@@ -59,6 +69,10 @@
 			margin-bottom: 20px;
 			@include RobotoCond (24px, 400, normal, false, 28px);
 			color: $textColor;
+		}
+		@include mq("tablet-wide", max) {
+			display: block;
+			margin: 0 15px;
 		}
 	}
 }

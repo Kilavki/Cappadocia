@@ -103,7 +103,22 @@ body {
 	&__our-trip {
 		margin-top: -24px;
 		margin-left: 260px;
-
+		@include mq ("tablet-wide", max) {
+			margin-top: -32px;
+			margin-left: 210px;
+		}
+		@include mq ("tablet", max) {
+			margin-top: -32px;
+			margin-left: 190px;
+		}
+		@include mq ("tablet-small", max) {
+			margin-top: -32px;
+			margin-left: 216px;
+		}
+		@include mq ("phone-wide", max) {
+			margin-top: -32px;
+			margin-left: 186px;
+		}
 	}
 	&__hotel {
 		margin-top: -24px;
