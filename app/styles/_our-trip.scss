@@ -8,6 +8,7 @@
 		position: relative;
 		margin-left: auto;
 		max-width: 1560px;
+		padding: 0 15px;
 	}
 	&__slider {
 		margin-left: auto;
@@ -42,7 +43,6 @@
 		justify-content: space-between;
 		align-items: flex-start;
 		height: 100%;
-		padding: 0 30px;
 		&-inner {
 			width: 100%;
 			@include mq("tablet-wide", max) {
