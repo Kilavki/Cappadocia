@@ -1,4 +1,9 @@
 .our-trip {
+	&__title {
+		@include mq("desktop", max) {
+			margin-right: auto;
+		}
+	}
 	&__inner {
 		position: relative;
 		margin-left: auto;
@@ -42,20 +47,15 @@
 			width: 100%;
 			@include mq("tablet-wide", max) {
 				display: flex;
+				flex-flow: row wrap;
 				justify-content: space-between;
 				margin-bottom: 40px;
 			}
-			@include mq("tablet-wide", max) {
-				flex-flow: row wrap;
-			}
-			@include mq("tablet", max) {
-				justify-content: space-between;
-			}
-			@include mq("tablet-small", max) {
+			@include mq("733", max) {
 				justify-content: space-around;
 			}
 			@include mq("phablet", max) {
-				flex-flow: column;
+				flex-flow: column nowrap;
 			}
 		}
 		@include mq("tablet-wide", max) {
