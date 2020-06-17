@@ -135,10 +135,16 @@ body {
 	&-data {
 		margin-top: -24px;
 		margin-left: 180px;
+		@include mq("tablet", max) {
+			margin-left: 60px;
+		}
 	}
 	&-price {
 		margin-top: -24px;
 		margin-left: 180px;
+		@include mq("tablet", max) {
+			margin-left: 60px;
+		}
 	}
 }
 
