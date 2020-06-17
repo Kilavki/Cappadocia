@@ -127,6 +127,10 @@ body {
 	&__price {
 		margin-top: -24px;
 		margin-left: 120px;
+		@include mq("tablet", max) {
+			margin-top: -32px;
+			margin-left: 90px;
+		}
 	}
 	&-data {
 		margin-top: -24px;

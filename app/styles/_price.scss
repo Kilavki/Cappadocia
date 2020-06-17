@@ -1,11 +1,19 @@
 .price {
-	background: {
-		image: url("../images/bg/price-bg.png");
-		repeat: no-repeat;
-		position: center right;
+	background-image: url("../images/bg/price-bg.png");
+	background-repeat: no-repeat;
+	background-position: center right;
+	@include mq("tablet", max) {
+		background-image: none !important;
 	}
 	&__inner {
 		display: flex;
+		@include mq("tablet-wide", max) {
+			width: 70%;
+			flex-flow: column nowrap;
+		}
+		@include mq("tablet-wide", max) {
+			width: 100%;
+		}
 	}
 	&__on {
 		order: 1;
@@ -19,5 +27,5 @@
 	&__list li {
 		margin-bottom: 20px;
 	}
-
+	
 }
